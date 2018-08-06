@@ -1,7 +1,8 @@
-name = input("What's your name? ")
-if name!="Fart":
-    print ("Your name may be %s, but I am going to call you Fart." %(name))
-    name = "Fart"
-    print ("Hello, %s"%(name))
-else:
-    print("Hello, Fart.")
+def name():
+    orig=input("Hello. Nice to meet you. What is your name? ")
+    if len(orig)>0 and orig.isalpha() and orig!="Fart":
+        print("Hello, %s. %s is a dumb name. Your name is Fart now." % (orig))
+        name()
+    elif orig=="Fart":
+        print("Hello, Fart.")
+name()
